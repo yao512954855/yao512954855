@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.javaboy.test.mapper.HrMapper">
+
+    <resultMap id="BaseResultMap" type="org.javaboy.test.model.Hr">
+            <result column="id" property="id" jdbcType="INTEGER" />
+            <result column="name" property="name" jdbcType="VARCHAR" />
+            <result column="phone" property="phone" jdbcType="CHAR" />
+            <result column="telephone" property="telephone" jdbcType="VARCHAR" />
+            <result column="address" property="address" jdbcType="VARCHAR" />
+            <result column="enabled" property="enabled" jdbcType="BIT" />
+            <result column="username" property="username" jdbcType="VARCHAR" />
+            <result column="password" property="password" jdbcType="VARCHAR" />
+            <result column="userface" property="userface" jdbcType="VARCHAR" />
+            <result column="remark" property="remark" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getAllHrs" resultMap="BaseResultMap">
+        select * from hr t1 left join t2  on t1.id= t2.;
+    </select>
+</mapper>

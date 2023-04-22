@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.javaboy.test.mapper.FlywaySchemaHistoryMapper">
+
+    <resultMap id="BaseResultMap" type="org.javaboy.test.model.FlywaySchemaHistory">
+            <result column="installed_rank" property="installedRank" jdbcType="INTEGER" />
+            <result column="version" property="version" jdbcType="VARCHAR" />
+            <result column="description" property="description" jdbcType="VARCHAR" />
+            <result column="type" property="type" jdbcType="VARCHAR" />
+            <result column="script" property="script" jdbcType="VARCHAR" />
+            <result column="checksum" property="checksum" jdbcType="INTEGER" />
+            <result column="installed_by" property="installedBy" jdbcType="VARCHAR" />
+            <result column="installed_on" property="installedOn" jdbcType="TIMESTAMP" />
+            <result column="execution_time" property="executionTime" jdbcType="INTEGER" />
+            <result column="success" property="success" jdbcType="BIT" />
+    </resultMap>
+
+    <select id="getAllFlywaySchemaHistorys" resultMap="BaseResultMap">
+        select * from flyway_schema_history t1 left join t2  on t1.id= t2.;
+    </select>
+</mapper>
